@@ -16,6 +16,12 @@
         
                   <div class="task_header col s9">
                         <strong>{{task.task_name}}</strong>  - {{task.due_date}}
+                        {% if task.is_urgent == 'on' %}
+                          <strong>this is urgent</strong>
+                        {% endif %}
+                  </div>
+                  <div>
+                      
                   </div>
                 </div>
                 <div class="collapsible-body">

@@ -70,7 +70,6 @@ def edit_category(category_id):
     category=mongo.db.categories.find_one({'_id': ObjectId(category_id)}))
 
 ''' this function is a form action for edit category  '''
-
 @app.route('/update_category/<category_id>', methods=['POST'])
 def update_category(category_id):
     mongo.db.categories.update(
@@ -97,6 +96,16 @@ def insert_category():
 @app.route('/new_category')
 def new_category():
     return render_template('addcategory.html')
+    
+    
+'''TESTING'''
+
+@app.route('/test')
+def test():
+    return render_template('test.html',
+    categories=mongo.db.categories.find())
+
+
    
     
 if __name__ == '__main__':
