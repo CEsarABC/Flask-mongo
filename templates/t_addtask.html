@@ -1,8 +1,9 @@
-{% extends 'base.html' %} 
+{% extends 't_base.html' %} 
 
 {% block content %}
 
 <h3>Add Task</h3>
+
 <div class="row">
     <form action="{{ url_for('insert_task') }}" method="POST" class="col s12">
         
@@ -53,6 +54,45 @@
                   Is Urgent
                 </label>
             </div>
+            <div class="switch">
+                <label>
+                  <input id="diary" name="diary" type="checkbox">
+                  <span class="lever"></span>
+                  diary
+                </label>
+            </div>
+            <div>
+              <input type="radio" id="huey" name="drone" value="huey">
+              <label for="huey">Huey</label>
+            </div>
+            <div>
+              <input type="radio" id="huey1" name="drone" value="huey1">
+              <label for="huey1">Huey1</label>
+            </div>
+                <p>
+                  <input type="checkbox" id="test5" />
+                  <label for="test5">Red</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="checkboxes" value="check1" id="test6" checked="checked" />
+                  <label for="test6">Yellow</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="checkboxes" value="check2" class="filled-in" id="filled-in-box" checked="checked" />
+                  <label for="filled-in-box">Filled in</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="checkboxes" value="check3" id="indeterminate-checkbox" />
+                  <label for="indeterminate-checkbox">Indeterminate Style</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="checkboxes" value="check4" id="test7" checked="checked"/>
+                  <label for="test7">Green</label>
+                </p>
+                <p>
+                  <input type="checkbox" name="checkboxes" value="check5" id="test8" disabled="disabled" />
+                  <label for="test8">Brown</label>
+                </p>
 
         </div>
         <div class="row">
@@ -63,13 +103,6 @@
         </div>
     </form>
     
-    <form method="POST">
-        <label for="fileinput">Choose file</label>
-        <input type="file" name="fileinput" accept="image/*"/>
-        <input type="submit" value="Submit"/>
-    </form>
-
-	    
   </div>
   
   
